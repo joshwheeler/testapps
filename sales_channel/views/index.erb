@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.shopify.com/s/assets/external/app.js"></script>
+    <script type="text/javascript">
+       ShopifyApp.init({
+         apiKey: '<%= $key %>',
+         shopOrigin: 'https://<%= $shop %>'
+       });
+    </script>
+    <script>
+      ShopifyApp.Bar.loadingOff()
+    </script>
+
+    <link rel="stylesheet" href="channels-ui-kit.css" type="text/css" />
+    <script src="channels-ui-kit.js"></script>
+  </head>
+
+  <body>
+    <div class="ui-empty-state">
+      <section class="ui-empty-state__section">
+        <div class="ui-empty-state__subsection">
+          <h1 class="ui-empty-state__title">You don't have any products on Twilio yet</h1>
+          <h2 class="ui-empty-state__subtitle">Create a listing to begin selling your products on Twilio</h2>
+        </div>
+        <div class="ui-empty-state__subsection">
+          <div class="ui-empty-state__items">
+            <div class="ui-empty-state__item">
+              <div class="ui-empty-state__subitems">
+                <div class="ui-empty-state__subitem ui-empty-state__subitem--image">
+                  <img src="doge.jpeg" alt="Empty state sample image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui-empty-state__subsection">
+          <a class="btn btn-large btn-primary" href="/listings">Create listing</a>
+        </div>
+      </section>
+    </div>
+    <div class="ui-footer-help" target="_blank">
+      <div class="ui-footer-help__content">
+        <div class="ui-footer-help__icon">
+          <svg role="img" class="next-icon next-icon--size-24 next-icon--no-nudge" aria-labelledby="next-help-f4f13b47b896c4e3dda071982d260af5-title">
+            <title id="next-help-f4f13b47b896c4e3dda071982d260af5-title">Help</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#next-help-circle">
+            </use>
+          </svg>
+        </div>
+        <div>
+          <p>Need help with Sample? Go to the <a href="#">Sample Help Center</a>.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

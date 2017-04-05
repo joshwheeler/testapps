@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: left;
+      }
+    </style>
+
+    <h1>
+      Order <%= @order.name %>
+    </h1>
+
+    <h3>
+      The customer purchased these items :
+    </h3>
+
+    <table style="width:100%">
+      <tr>
+        <th>Product Title</th>
+        <th>Quantity</th>
+        <th>SKU</th>
+      </tr>
+      <% @order.line_items.each do |line| %>
+        <tr>
+          <td> <%= line.title %> </td>
+          <td> <%= line.quantity %> </td>
+            <% if line.sku.present? %>
+          <td> <%= line.sku %> </td>
+            <% else %>
+          <td> N/A </td>
+            <% end %>
+        </tr>
+      <% end %>
+    </table>
+
+  </body>
+</html>

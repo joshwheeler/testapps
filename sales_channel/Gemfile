@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+gem 'shopify_api'
+gem 'httparty'
+gem 'dotenv'
+gem 'pry'
+gem 'twilio-ruby'
+gem 'sinatra-activerecord'
+gem 'sqlite3'
+gem 'rake'
+
+# gem "rails"
